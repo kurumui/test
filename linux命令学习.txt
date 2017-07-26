@@ -1,0 +1,48 @@
+linux学习
+
+cd  目录名     ：进入一个目录
+cd ..          ：返回上一级目录
+ls             ：列出当前目录下的目录及文件
+mkdir 目录名    ：在当前目录下创建子目录
+pwd            ：查看当前目录完整路径
+rm 文件名.后缀 :删除文件
+rm -r 目录名   ：删除目录及目录中所有文件    ！！！危险命令 慎用
+rmdir 目录名   ：删除空目录，当目录下有文件时，删除失败
+mv 目录名1/文件1 目录名2/文件2(不存在)  ：目录改名或文件改名
+mv abc q/      :将文件abc移动到q目录下
+mv abc ..      :将文件或目录移动到上级目录
+mv 目录名1/文件1 目录名2/文件2(存在)  ：移动目录1或文件1到目录2/文件2
+cp 文件名1 文件名2 ：将文件1复制一份命名文件2
+cp 目录1 目录2 -R ：将目录1 复制一份命名为目录2
+
+
+******使用putty工具远程命令行连接
+
+linux服务器启动
+连接服务器
+----启动oracle
+lsnvctl start 启动监听
+sqlplus /nolog
+SQL> conn /as sysdba
+SQL> start up
+----启动NC
+使用root用户
+su
+cd /yonyou/home
+# ./startup.sh
+等待3-5分钟，启动完成
+测试能否正常登陆
+
+
+*********使用plsqldev进行数据库操作
+
+linux重启命令：reboot
+
+linux立刻关机命令 shutdown -h now
+linux2分钟后关机  shutdown -h 2
+
+
+linux连接win系统共享 命令行
+smbclent --user=ncuser //192.168.10.6/databak  使用用户名ncuser连接10.6服务器上的共享目录databak 
+
+
