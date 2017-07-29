@@ -9,7 +9,9 @@
 </style>
 
 <script language=javascript>
-  function onlyNum()
+	var shebei =new Array()
+	shebei[0]="李飞豹的电脑"
+		function onlyNum()
   {
     if(!((event.KeyCode>=48&&event.keyCode<=57)||(event.keyCode>=96&&event.keyCode<=105)))
       event.returnvalue=false;
@@ -21,7 +23,8 @@
 <meta name="keywords" content=""> 
 <meta name="description" content=""> 
 <script language="javascript" type="text/javascript"> 
-	function getp1(){     alert(document.getElementById("p1").innerHTML); } 
+	function getp1(){     alert(document.getElementById("p1").innerHTML);
+			document.write(shebei[0])} 
 </script> 
 <body> 
 	<p id="p1">段落</p>
