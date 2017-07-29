@@ -1,8 +1,22 @@
-<p>请输入主机编号</p>
+<div><p>请输入主机编号</p></div>
+
 <style type="text/css">
   p{text-align:center;}
-  
+  div{position: absolute;
+	top: 50%;
+	left: 50%;
+}
 </style>
 
-<img src="https://raw.githubusercontent.com/kurumui/test/master/%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg"  alt="" />
+<script language=javascript>
+  function onlyNum()
+  {
+    if(!((event.KeyCode>=48&&event.keyCode<=57)||(event.keyCode>=96&&event.keyCode<=105)))
+      event.returnvalue=false;
+  }
+</script>
+<input onkeydown="onlyNum();">
+
+
+
 
