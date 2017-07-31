@@ -1,25 +1,507 @@
-<form name="register1" id="register1">
-         
-          <p id=pp>请输入主机编号<br/><input type="number" id="count" name="count" min="1" max="999" step="1"/></p>
-          <p id=pl><input type="submit" name="register" value="Submit" onclick=" checkForm()"/></p>
-       
-</form>
-<style type="text/css">
-          #pp{margin-top:150px;
-          margin-left:-40px;
-          text-align:center;
-          width:400px;
-          height:200px;}
-          #pl{margin-top:10px;
-          display:block;
-          text-align:center;
-                    margin-left:-40px;
-                     width:400px;
-                     height:200px;}
-</style>
-
-
-<script type="javascript">
-function 
-
+<script >
+var shebei = new Array()
+shebei[1]="位置：生产管理部使用人贺立峰IP地址192.168.10.35"
+shebei[2]="位置：生产管理部使用人闫军素IP地址192.168.10.36"
+shebei[3]="位置：生产管理部使用人李国广IP地址192.168.10.37"
+shebei[4]="位置：生产管理部使用人赵川IP地址192.168.10.38"
+shebei[5]="位置：生产管理部使用人王兴伟IP地址192.168.10.39"
+shebei[6]="位置：生产管理部使用人公用IP地址192.168.10.40"
+shebei[7]="位置：生产管理部使用人才迎东IP地址192.168.10.41"
+shebei[8]="位置：生产管理部使用人张建军IP地址192.168.10.42"
+shebei[9]="位置：生产管理部使用人梁明坤IP地址192.168.10.43"
+shebei[10]="位置：企业管理部使用人温伟杰IP地址192.168.10.44"
+shebei[11]="位置：企业管理部使用人邓辉IP地址192.168.10.45"
+shebei[12]="位置：企业管理部使用人赵雪刚IP地址192.168.10.46"
+shebei[13]="位置：企业管理部使用人苗兵兵IP地址192.168.10.47"
+shebei[14]="位置：企业管理部使用人常丽召IP地址192.168.10.48"
+shebei[15]="位置：企业管理部使用人郭晓曼IP地址192.168.10.49"
+shebei[16]="位置：企业管理部使用人吴亚亚IP地址192.168.10.50"
+shebei[17]="位置：企业管理部使用人郭帅帅IP地址192.168.10.51"
+shebei[18]="位置：企业管理部使用人高伟IP地址192.168.10.52"
+shebei[19]="位置：企业管理部使用人段飞IP地址192.168.10.53"
+shebei[20]="位置：企业管理部使用人王喜娟IP地址192.168.10.54"
+shebei[21]="位置：软件开发使用人魏月峰IP地址192.168.10.55"
+shebei[22]="位置：软件开发使用人申宪峰IP地址192.168.10.56"
+shebei[23]="位置：软件开发使用人王磊磊IP地址192.168.10.57"
+shebei[24]="位置：软件开发使用人李飞豹IP地址192.168.10.58"
+shebei[25]="位置：销售大厅使用人李少康IP地址192.168.10.59"
+shebei[26]="位置：销售大厅使用人郭静IP地址192.168.10.60"
+shebei[27]="位置：销售大厅使用人杨晓露IP地址192.168.10.61"
+shebei[28]="位置：销售大厅使用人张妮平IP地址192.168.10.62"
+shebei[29]="位置：销售大厅使用人梁飞飞IP地址192.168.10.63"
+shebei[30]="位置：销售大厅使用人侯思思IP地址192.168.10.64"
+shebei[31]="位置：销售大厅使用人陈雪敏IP地址192.168.10.65"
+shebei[32]="位置：销售大厅使用人郭娆IP地址192.168.10.66"
+shebei[33]="位置：销售大厅使用人张蕾IP地址192.168.10.67"
+shebei[34]="位置：销售大厅使用人郝晓贝IP地址192.168.10.68"
+shebei[35]="位置：销售大厅使用人闫飞飞IP地址192.168.10.69"
+shebei[36]="位置：销售大厅使用人孟艳IP地址192.168.10.70"
+shebei[37]="位置：销售大厅使用人李晓IP地址192.168.10.71"
+shebei[38]="位置：业务大厅使用人蔡月强IP地址192.168.10.72"
+shebei[39]="位置：业务大厅使用人李文保IP地址192.168.10.73"
+shebei[40]="位置：财务室使用人王寒IP地址192.168.10.74"
+shebei[41]="位置：财务室使用人史金燕IP地址192.168.10.75"
+shebei[42]="位置：财务室使用人徐欣欣IP地址192.168.10.76"
+shebei[43]="位置：财务室使用人管理公用IP地址192.168.10.77"
+shebei[44]="位置：财务室使用人盖山山IP地址192.168.10.78"
+shebei[45]="位置：财务室使用人徐欣欣IP地址192.168.10.79"
+shebei[46]="位置：财务室使用人韩露娟IP地址192.168.10.80"
+shebei[47]="位置：财务室使用人董子涵IP地址192.168.10.81"
+shebei[48]="位置：财务室使用人陈伟IP地址192.168.10.82"
+shebei[49]="位置：财务室使用人田伟平IP地址192.168.10.83"
+shebei[50]="位置：财务室使用人王寒税务IP地址192.168.10.84"
+shebei[51]="位置：财务室单间使用人齐领国IP地址192.168.10.85"
+shebei[52]="位置：企业文化部使用人王宪刚IP地址192.168.10.86"
+shebei[53]="位置：企业文化部使用人安冲IP地址192.168.10.87"
+shebei[54]="位置：企业文化部使用人高增强IP地址192.168.10.88"
+shebei[55]="位置：督查室使用人王晓宗IP地址192.168.10.89"
+shebei[56]="位置：督查室使用人崔晓飞IP地址192.168.10.90"
+shebei[57]="位置：二楼财务使用人刘广浩IP地址192.168.10.91"
+shebei[58]="位置：二楼财务使用人单银科IP地址192.168.10.92"
+shebei[59]="位置：二楼财务使用人杨莹莹IP地址192.168.10.93"
+shebei[60]="位置：二楼财务使用人陈尚明IP地址192.168.10.94"
+shebei[61]="位置：市场调研使用人吴伟丽IP地址192.168.10.95"
+shebei[62]="位置：市场调研使用人张军军IP地址192.168.10.96"
+shebei[63]="位置：市场调研使用人空IP地址192.168.10.97"
+shebei[64]="位置：市场调研使用人张悦IP地址192.168.10.98"
+shebei[65]="位置：网络室使用人苗佳佳IP地址192.168.10.99"
+shebei[66]="位置：网络室使用人吴涵IP地址192.168.10.100"
+shebei[67]="位置：网络室使用人杜晓彤IP地址192.168.10.101"
+shebei[68]="位置：软件培训室使用人公用IP地址192.168.10.102"
+shebei[69]="位置：软件培训室使用人公用IP地址192.168.10.103"
+shebei[70]="位置：软件培训室使用人公用IP地址192.168.10.104"
+shebei[71]="位置：运营中心使用人赵龙腾IP地址192.168.10.105"
+shebei[72]="位置：运营中心使用人张利IP地址192.168.10.106"
+shebei[73]="位置：运营中心使用人许豪IP地址192.168.10.107"
+shebei[74]="位置：运营中心使用人张少康IP地址192.168.10.108"
+shebei[75]="位置：运营中心使用人郭遥飞IP地址192.168.10.109"
+shebei[76]="位置：运营中心使用人张义IP地址192.168.10.110"
+shebei[77]="位置：运营中心使用人李卫光IP地址192.168.10.111"
+shebei[78]="位置：采购部使用人王振波IP地址192.168.10.112"
+shebei[79]="位置：采购部使用人武崇韦IP地址192.168.10.113"
+shebei[80]="位置：采购部使用人牛建涛IP地址192.168.10.114"
+shebei[81]="位置：采购部使用人韩卫东IP地址192.168.10.115"
+shebei[82]="位置：采购部使用人高晓宁IP地址192.168.10.116"
+shebei[83]="位置：采购部使用人郑欣IP地址192.168.10.117"
+shebei[84]="位置：安环使用人王志龙IP地址192.168.10.118"
+shebei[85]="位置：安环使用人施伟周IP地址192.168.10.119"
+shebei[86]="位置：安环使用人闫国涛IP地址192.168.10.120"
+shebei[87]="位置：安环使用人陈海燕IP地址192.168.10.121"
+shebei[88]="位置：五金件使用人郭军良IP地址192.168.10.122"
+shebei[89]="位置：五金件使用人薛波IP地址192.168.10.123"
+shebei[90]="位置：五金件使用人季显松IP地址192.168.10.124"
+shebei[91]="位置：五金件使用人李博楠IP地址192.168.10.125"
+shebei[92]="位置：五金件使用人张明亮IP地址192.168.10.126"
+shebei[93]="位置：五金件磅房使用人王明明IP地址192.168.10.127"
+shebei[94]="位置：纵剪办公室使用人赵现科IP地址192.168.10.128"
+shebei[95]="位置：纵剪办公室使用人游小丽IP地址192.168.10.129"
+shebei[96]="位置：焊管车间办公室群使用人王永贺IP地址192.168.10.130"
+shebei[97]="位置：焊管车间办公室群使用人王永贺统计IP地址192.168.10.131"
+shebei[98]="位置：焊管车间办公室群使用人赵晓明IP地址192.168.10.132"
+shebei[99]="位置：焊管车间办公室群使用人严敏IP地址192.168.10.133"
+shebei[100]="位置：焊管车间办公室群使用人王启双IP地址192.168.10.134"
+shebei[101]="位置：焊管车间办公室群使用人杨明秀IP地址192.168.10.135"
+shebei[102]="位置：焊管车间办公室群使用人范海涛IP地址192.168.10.136"
+shebei[103]="位置：焊管车间办公室群使用人赵鹏菲IP地址192.168.10.137"
+shebei[104]="位置：焊管车间办公室群使用人赵萧然IP地址192.168.10.138"
+shebei[105]="位置：焊管车间办公室群使用人刘星IP地址192.168.10.139"
+shebei[106]="位置：焊管车间办公室群使用人刘春霞IP地址192.168.10.140"
+shebei[107]="位置：焊管车间办公室群使用人田伟续IP地址192.168.10.141"
+shebei[108]="位置：焊管车间办公室群使用人李红朝IP地址192.168.10.142"
+shebei[109]="位置：二号磅房使用人王明明IP地址192.168.10.143"
+shebei[110]="位置：镀锌收发室使用人李丹丹IP地址192.168.10.144"
+shebei[111]="位置：镀锌收发室使用人米芳IP地址192.168.10.145"
+shebei[112]="位置：镀锌收发室使用人李双红IP地址192.168.10.146"
+shebei[113]="位置：镀锌二楼办公室使用人四厂统计IP地址192.168.10.147"
+shebei[114]="位置：镀锌二楼办公室使用人景吉平IP地址192.168.10.148"
+shebei[115]="位置：镀锌二楼办公室使用人翟月梅IP地址192.168.10.149"
+shebei[116]="位置：镀锌二楼办公室使用人富文利IP地址192.168.10.150"
+shebei[117]="位置：镀锌二楼办公室使用人统计IP地址192.168.10.151"
+shebei[118]="位置：镀锌二楼办公室使用人向连福IP地址192.168.10.152"
+shebei[119]="位置：镀锌二楼办公室使用人郭朋IP地址192.168.10.153"
+shebei[120]="位置：镀锌二楼办公室使用人靳刚IP地址192.168.10.154"
+shebei[121]="位置：镀锌二楼办公室使用人陶会忠IP地址192.168.10.155"
+shebei[122]="位置：镀锌九线办公室使用人统计IP地址192.168.10.156"
+shebei[123]="位置：镀锌九线办公室使用人汪心传IP地址192.168.10.157"
+shebei[124]="位置：辅料库使用人魏家豪IP地址192.168.10.158"
+shebei[125]="位置：辅料库使用人马富雅IP地址192.168.10.159"
+shebei[126]="位置：质检中心使用人张爱增IP地址192.168.10.160"
+shebei[127]="位置：质检中心使用人质检主任IP地址192.168.10.161"
+shebei[128]="位置：质检中心使用人质检主任IP地址192.168.10.162"
+shebei[129]="位置：质检中心使用人五元素IP地址192.168.10.163"
+shebei[130]="位置：质检中心使用人万能力学IP地址192.168.10.164"
+shebei[131]="位置：质检中心使用人新设备IP地址192.168.10.165"
+shebei[132]="位置：一号门使用人保安IP地址192.168.10.166"
+shebei[133]="位置：安环部生产线使用人标签打印IP地址192.168.10.167"
+shebei[134]="位置：安环部生产线使用人标签打印IP地址192.168.10.168"
+shebei[135]="位置：安环部生产线使用人标签打印IP地址192.168.10.169"
+shebei[136]="位置：三号门使用人张光华IP地址192.168.10.170"
+shebei[137]="位置：浴室使用人张光华IP地址192.168.10.171"
+shebei[138]="位置：复印机使用人销售部IP地址192.168.10.172"
+shebei[139]="位置：银行ATM机使用人老二号门IP地址192.168.10.173"
+shebei[140]="位置：电修房使用人李建波IP地址192.168.10.174"
+shebei[141]="位置：电修房使用人李建波IP地址192.168.10.175"
+shebei[142]="位置：电修房使用人李建波IP地址192.168.10.176"
+shebei[143]="位置：焊管培训室使用人陶慧忠IP地址192.168.10.177"
+shebei[144]="位置：镀锌电工室使用人王栓奎IP地址192.168.10.178"
+shebei[145]="位置：总经理室使用人康福祥IP地址192.168.10.179"
+shebei[146]="位置：总经理室使用人温石亮IP地址192.168.10.180"
+shebei[147]="位置：总经理室使用人赵艳奇IP地址192.168.10.181"
+shebei[148]="位置：二楼会议室使用人笔记本IP地址192.168.10.182"
+shebei[149]="位置：网络室使用人笔记本IP地址192.168.10.183"
+shebei[150]="位置：网络机房使用人服务器IP地址192.168.10.184"
+shebei[151]="位置：网络机房使用人服务器IP地址192.168.10.185"
+shebei[152]="位置：网络机房使用人服务器IP地址192.168.10.186"
+shebei[153]="位置：网络机房使用人服务器IP地址192.168.10.187"
+shebei[154]="位置：网络机房使用人服务器IP地址192.168.10.188"
+shebei[155]="位置：网络机房使用人服务器IP地址192.168.10.189"
+shebei[156]="位置：网络机房使用人电话录音系统IP地址192.168.10.190"
+shebei[157]="位置：4号门使用人张光华IP地址192.168.10.191"
 </script>
+ <meta charset="UTF-8">
+ <div class="ccc">
+  <div class="ddd">
+ <div class="modal-dialog login animated">
+    		      <div class="modal-content">
+    		        
+                    <div class="modal-body">  
+                        <div class="box">
+                             <div class="content">
+                               
+                                <div class="division">
+                                    <div class="line l"></div>
+                                      
+                                    <div class="line r"></div>
+                                </div>
+                                <div class="error"></div>
+                                
+                             </div>
+                        </div>
+                        <div class="box">
+                            <div class="content registerBox" style="display: block;">
+                             <div class="form">
+                                <form  >
+                                <input id="email" class="form-control" type="number" placeholder="4位数字编号" name="email">
+                                
+								<div class="eee"> </div>
+								
+							
+								
+								
+								
+							
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					
+					
+                    <div class="modal-footer">
+                        <div class="forgot login-footer" style="display: none;">
+                           
+                        </div>
+                        <div class="forgot register-footer" style="display: block;">
+                             <span>请输入设备编号</span>
+                            
+                        </div>
+                    </div>        
+    		      </div>
+		      </div>
+
+ 
+ 
+ 
+ </div>
+ 
+ </div>
+ 
+
+ 	<button class="button" type="button" onclick="xianshi()">提交</button>
+ 
+ <script>
+  function xianshi()
+{
+
+
+var haoma=document.getElementById("email").value;
+document.write(shebei[haoma]);
+
+
+}
+</script>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ <style type="text/css">
+ /*
+ *
+ * login-register modal
+ * Autor: Creative Tim
+ * Web-autor: creative.tim
+ * Web script: #
+ * 
+ */
+ 
+/*  Shake animation  */
+
+@charset "UTF-8";
+#ss{
+height:1000px;
+weight:200ps;
+
+}
+.animated {
+  -webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+
+.animated.hinges {
+	-webkit-animation-duration: 2s;
+	   -moz-animation-duration: 2s;
+	     -o-animation-duration: 2s;
+	        animation-duration: 2s;
+}
+
+.animated.slow {
+	-webkit-animation-duration: 3s;
+	   -moz-animation-duration: 3s;
+	     -o-animation-duration: 3s;
+	        animation-duration: 3s;
+}
+
+.animated.snail {
+	-webkit-animation-duration: 4s;
+	   -moz-animation-duration: 4s;
+	     -o-animation-duration: 4s;
+	        animation-duration: 4s;
+}
+
+@-webkit-keyframes shake {
+	0%, 100% {-webkit-transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);}
+}
+
+@-moz-keyframes shake {
+	0%, 100% {-moz-transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {-moz-transform: translateX(10px);}
+}
+
+@-o-keyframes shake {
+	0%, 100% {-o-transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {-o-transform: translateX(10px);}
+}
+
+@keyframes shake {
+	0%, 100% {transform: translateX(0);}
+	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+	20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+.shake {
+	-webkit-animation-name: shake;
+	-moz-animation-name: shake;
+	-o-animation-name: shake;
+	animation-name: shake;
+}
+
+.login .modal-dialog{
+    width: 350px;
+}
+.login .modal-footer{
+    border-top: 0;
+    margin-top: 0px;
+    padding: 10px 20px 20px;
+}
+.login .modal-header {
+    border: 0 none;
+    padding: 15px 15px 15px;
+/*     padding: 11px 15px; */
+}
+.login .modal-body{
+/*     background-color: #eeeeee; */
+}
+.login .division {
+    float: none;
+    margin: 0 auto 18px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.login .division .line {
+    border-top: 1px solid #DFDFDF;
+    position: absolute;
+    top: 10px;
+    width: 34%;
+}
+.login .division .line.l {
+    left: 0;
+}
+.login .division .line.r {
+    right: 0;
+}
+.login .division span {
+    color: #424242;
+    font-size: 17px;
+}
+.login .box .social {
+    float: none;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.login .social .circle{
+    background-color: #EEEEEE;
+    color: #FFFFFF;
+    border-radius: 100px;
+    display: inline-block;
+    margin: 0 17px;
+    padding: 15px;
+}
+.login .social .circle .fa{
+    font-size: 16px;
+}
+.login .social .facebook{
+    background-color: #455CA8;
+    color: #FFFFFF;
+}
+.login .social .google{
+    background-color: #F74933;
+}
+.login .social .github{
+    background-color: #403A3A;
+}
+.login .facebook:hover{
+    background-color: #6E83CD;
+}
+.login .google:hover{
+    background-color: #FF7566;
+}
+.login .github:hover{
+    background-color: #4D4D4d;;
+}
+.login .forgot {
+    color: #797979;
+    margin-left: 0;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+.login .btn-login, .registerBox .btn-register{
+    background-color: #00BBFF;
+    border-color: #00BBFF;
+    border-width: 0;
+    color: #FFFFFF;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 50px;
+    text-transform: uppercase;
+    width: 100%;
+}
+.login .btn-login:hover, .registerBox .btn-register:hover{
+    background-color: #00A4E4;
+    color: #FFFFFF;
+}
+.login .form-control{
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.09);
+    box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+    color: #FFFFFF;
+}
+.login .form-control:hover{
+    background-color: rgba(0,0,0,.16);
+}
+.login .form-control:focus{
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+    background-color: rgba(0,0,0,0.23);
+    color: #FFFFFF;
+}
+.login .box .form input[type="text"], .login .box .form input[type="password"],.login .box .form input[type="number"]  {
+    border-radius: 3px;
+    border: none;
+    color: #333333;
+    font-size: 16px;
+    height: 46px;
+    margin-bottom: 5px;
+    padding: 13px 12px;
+    width: 100%;
+}
+.login .box .form input[type="text"], .login .box .form input[type="password"]{
+display:none;
+
+}
+
+@media (max-width:400px){
+    .login .modal-dialog{
+        width: 100%;
+    }
+}
+
+.big-login, .big-register{
+    background-color: #00bbff;
+    color: #FFFFFF;
+    border-radius: 7px;
+    border-width: 2px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    padding: 16px 60px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.big-login:hover{
+    background-color: #00A4E4;
+    color: #FFFFFF;
+}
+.big-register{
+    background-color: rgba(0,0,0,.0);
+    color: #00bbff;
+    border-color: #00bbff;
+}
+.big-register:hover{
+    border-color: #00A4E4;
+    color:  #00A4E4;
+}
+ .ccc{
+ width:80%;
+ text-align:center;
+ display:block;
+ margin:0 auto;
+ }
+ .ddd{
+ 
+ margin-top:20%;
+ }
+  .eee{
+ 
+ margin-top:5%;
+ }
+
+
+  .button{
+     width:80%;
+ text-align:center;
+ display:block;
+ height:8%;
+ margin:0 auto;
+  font-size: 2em;
+}
+ 
+ </style>
